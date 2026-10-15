@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#12081f" />
+    <title>Brainiax Live Display</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;700;800&family=Playfair+Display:wght@700&family=Russo+One&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main class="scene">
+      <div class="scene__background" aria-hidden="true"></div>
+      <div class="scene__shade" aria-hidden="true"></div>
+      <div class="arena-depth" aria-hidden="true">
+        <span class="studio-wall studio-wall--left"></span>
+        <span class="studio-wall studio-wall--right"></span>
+        <span class="studio-cutout"></span>
+        <span class="studio-bars"></span>
+        <span class="studio-orb studio-orb--cutout"></span>
+        <span class="studio-orb studio-orb--mid"></span>
+        <span class="studio-orb studio-orb--floor"></span>
+      </div>
+
+      <header class="brand" aria-label="Brainiax Champions">
+        <svg class="champions-title__crown" viewBox="0 0 64 38" aria-hidden="true">
+          <defs>
+            <linearGradient id="crown-gold" x1="0" y1="0" x2="0" y2="1">
+              <stop stop-color="#ff7ad9" />
+              <stop offset=".5" stop-color="#b44cff" />
+              <stop offset="1" stop-color="#6a2cff" />
+            </linearGradient>
+          </defs>
+          <path fill="url(#crown-gold)" d="M7 29 3 7l16 10L31 2l13 15L61 7l-5 22H7Zm0 4h49v5H7v-5Z" />
+        </svg>
+        <div class="champions-title">
+          <svg class="champions-title__frame" viewBox="0 0 900 240" preserveAspectRatio="none" aria-hidden="true">
+            <defs>
+              <linearGradient id="plaque-stroke" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0" stop-color="#3de7ff" />
+                <stop offset="0.48" stop-color="#8d78ff" />
+                <stop offset="1" stop-color="#ff4ec8" />
+              </linearGradient>
+            </defs>
+            <polygon points="78,14 822,14 886,120 822,226 78,226 14,120" fill="#140b24" stroke="url(#plaque-stroke)" stroke-width="4" />
+          </svg>
+          <span class="champions-title__brainiax">Brainiax</span>
+          <span class="champions-title__champions">
+            <i aria-hidden="true"></i>
+            Champions
+            <i aria-hidden="true"></i>
+          </span>
+        </div>
+      </header>
+
+      <button
+        class="fullscreen-button"
+        id="fullscreenButton"
+        type="button"
+        aria-label="Enter fullscreen"
+        title="Enter fullscreen"
+      >
+        <svg class="fullscreen-button__icon fullscreen-button__icon--expand" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5" />
+        </svg>
+        <svg class="fullscreen-button__icon fullscreen-button__icon--collapse" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M9 4v5H4M20 9h-5V4M15 20v-5h5M4 15h5v5" />
+        </svg>
+        <span id="fullscreenLabel">Fullscreen</span>
+      </button>
+
+      <section class="display" aria-label="Live number display">
+        <div class="orbit orbit--back" aria-hidden="true"></div>
+
+        <div class="number-stage">
+          <div id="number3d" class="number-3d" aria-live="polite" aria-atomic="true"></div>
+          <div id="numberReflection" class="number-reflection" aria-hidden="true"></div>
+        </div>
+
+        <div class="orbit orbit--front" aria-hidden="true"></div>
+
+        <div class="platform" aria-hidden="true">
+          <div class="platform__top"></div>
+          <div class="platform__ring platform__ring--outer"></div>
+          <div class="platform__ring platform__ring--light"></div>
+          <div class="platform__ring platform__ring--inner"></div>
+        </div>
+      </section>
+
+      <div class="connection" id="connection">
+        <span class="connection__dot"></span>
+        <span id="connectionText">Preview data</span>
+      </div>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
