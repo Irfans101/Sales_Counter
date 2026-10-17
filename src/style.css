@@ -207,7 +207,7 @@ body {
   z-index: 4;
   top: 60.6%;
   left: 50%;
-  width: 56vw;
+  width: 68vw;
   height: 28vh;
   perspective: 1800px;
   transform: translate(-50%, -42%);
@@ -232,7 +232,7 @@ body {
   position: absolute;
   max-width: 100%;
   font-family: Orbitron, Outfit, sans-serif;
-  font-size: clamp(8rem, 30vh, 17rem);
+  font-size: clamp(9.5rem, 33vh, 19rem);
   font-weight: 900;
   letter-spacing: 0.06em;
   line-height: 0.9;
@@ -399,7 +399,7 @@ body {
   .number-stage { width: 70vw; }
   .number-3d__face,
   .number-3d__back,
-  .number-reflection { font-size: clamp(7rem, 28vw, 16rem); }
+  .number-reflection { font-size: clamp(8.5rem, 32vw, 18rem); }
   .platform { width: 72vw; }
 }
 
