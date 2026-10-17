@@ -35,7 +35,7 @@ body {
 .scene__background {
   z-index: -3;
   inset: 0;
-  background: url("/Stage-background.png") center / cover no-repeat;
+  background: url("/Stage-background.jpg") center / cover no-repeat;
 }
 .scene__shade { display: none; }
 .arena-depth { display: none; }
@@ -102,12 +102,7 @@ body {
 .studio-orb--floor { right: 7%; bottom: 11%; width: 1.35vw; height: 1.35vw; background: radial-gradient(circle at 35% 30%, #fff, #b7d8ff 42%, #4d86e0); }
 
 .brand {
-  position: absolute;
-  z-index: 10;
-  top: 12.5%;
-  left: 50%;
-  width: min(42vw, 560px);
-  transform: translateX(-50%);
+  display: none;
 }
 
 .champions-title {
@@ -210,7 +205,7 @@ body {
 .number-stage {
   position: absolute;
   z-index: 4;
-  top: 58%;
+  top: 60.6%;
   left: 50%;
   width: 56vw;
   height: 28vh;
@@ -236,11 +231,11 @@ body {
 .number-reflection {
   position: absolute;
   max-width: 100%;
-  font-family: "Russo One", Outfit, sans-serif;
-  font-size: clamp(8rem, 32vh, 18rem);
-  font-weight: 400;
-  letter-spacing: 0.04em;
-  line-height: 0.82;
+  font-family: Orbitron, Outfit, sans-serif;
+  font-size: clamp(8rem, 30vh, 17rem);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  line-height: 0.9;
   white-space: nowrap;
 }
 
@@ -248,14 +243,13 @@ body {
 .number-3d__back {
   color: transparent;
   background:
-    linear-gradient(165deg, rgba(255, 255, 255, 0.82) 0%, transparent 16% 78%, rgba(190, 245, 255, 0.35) 100%),
-    linear-gradient(180deg, #ff4fd8 0%, #ef5cff 24%, #9a6bff 50%, #4aa6ff 76%, #2de7ff 100%);
+    linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, transparent 22%),
+    linear-gradient(90deg, #4df3ff 0%, #6ec4ff 28%, #d06bff 52%, #ff2eb8 76%, #ff1496 100%);
   background-clip: text;
-  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.72);
+  -webkit-text-stroke: 1.5px rgba(255, 255, 255, 0.7);
   filter:
-    drop-shadow(0 0 5px rgba(255, 79, 216, 0.7))
-    drop-shadow(0 0 8px rgba(45, 231, 255, 0.65))
-    drop-shadow(0 10px 8px rgba(0, 0, 0, 0.4));
+    drop-shadow(0 0 6px rgba(77, 243, 255, 0.7))
+    drop-shadow(0 0 8px rgba(255, 20, 150, 0.65));
   backface-visibility: hidden;
   animation: glass-shine 8s ease-in-out infinite;
 }
